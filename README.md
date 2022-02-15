@@ -4,8 +4,6 @@ list a user's npm packages sorted by monthly downloads
 
 very experimental proof of concept, not to be relied upon even a little bit
 
-was working fine until I hit the rate limit :X
-
 ## sample output
 
 ```
