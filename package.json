@@ -1,6 +1,6 @@
 {
   "name": "npm-maintainer-dash",
-  "description": "list a npm user's packages sorted by downloads",
+  "description": "list a npm user's packages sorted by monthly downloads",
   "version": "1.0.0",
   "author": "Nate Goldman <ungoldman@gmail.com> (https://ungoldman.com/)",
   "bin": "./index.js",

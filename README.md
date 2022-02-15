@@ -1,6 +1,8 @@
 # npm maintainer dash
 
-experimental proof of concept to try getting a full list of a user's repos sorted by downloads in the last month.
+list a user's npm packages sorted by monthly downloads
+
+very experimental proof of concept, not be relied upon even a little bit
 
 was working fine until I hit the rate limit :X
 
