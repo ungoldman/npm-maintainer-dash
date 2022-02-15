@@ -3,6 +3,7 @@
   "description": "list a npm user's packages sorted by downloads",
   "version": "1.0.0",
   "author": "Nate Goldman <ungoldman@gmail.com> (https://ungoldman.com/)",
+  "bin": "./index.js",
   "dependencies": {
     "as-table": "^1.0.55",
     "download-stats": "^0.3.4",
