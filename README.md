@@ -35,6 +35,18 @@ watchify                          3823397
 ...
 ```
 
+## try it out
+
+works with npx if you know how to ask nicely :)
+
+```
+npx https://github.com/ungoldman/npm-maintainer-dash username
+```
+
+(you can do this with any repo if there's a package.json with a bin field pointing to a valid executable)
+
+absolutely not guaranteed to work
+
 ## why
 
 wish npm did this for you! as a maintainer it's a pain to figure out how to prioritize package maintenance based on real-world usage. squeaky wheel often gets more attention than the thing 1m users are silently relying on etc etc
