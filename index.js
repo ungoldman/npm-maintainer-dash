@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const NpmApi = require("npm-api");
 const stats = require("download-stats");
 const asTable = require("as-table");
