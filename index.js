@@ -48,6 +48,7 @@ function getRepoDownloads(repos) {
     );
   });
 
+  // todo: batch requests like a responsible adult
   return Promise.all(reqs);
 }
 
