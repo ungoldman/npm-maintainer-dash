@@ -1,0 +1,17 @@
+{
+  "name": "npm-maintainer-dash",
+  "description": "list a npm user's packages sorted by downloads",
+  "version": "1.0.0",
+  "author": "Nate Goldman <ungoldman@gmail.com> (https://ungoldman.com/)",
+  "dependencies": {
+    "as-table": "^1.0.55",
+    "download-stats": "^0.3.4",
+    "npm-api": "^1.0.1"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
