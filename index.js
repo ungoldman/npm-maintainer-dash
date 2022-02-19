@@ -5,10 +5,11 @@ const stats = require("download-stats");
 const asTable = require("as-table");
 
 const username = process.argv[2];
+const limit = parseInt(process.argv[3]) || Infinity;
 
 if (typeof username !== "string") {
   console.log("must provide valid username");
-  console.log("usage: node index.js username");
+  console.log("usage: node index.js <username> [limit]");
   process.exit(1);
 }
 
@@ -37,7 +38,7 @@ function getDownloadsByUser(username) {
 function getRepoDownloads(repos) {
   const reqs = [];
 
-  repos.forEach((repo) => {
+  repos.slice(0, limit).forEach((repo) => {
     reqs.push(
       new Promise((resolve, reject) => {
         stats.get.lastMonth(repo, function (err, results) {
