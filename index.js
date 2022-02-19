@@ -5,10 +5,11 @@ const stats = require("download-stats");
 const asTable = require("as-table");
 
 const username = process.argv[2];
+const limit = parseInt(process.argv[3]) || Infinity;
 
 if (typeof username !== "string") {
   console.log("must provide valid username");
-  console.log("usage: node index.js username");
+  console.log("usage: node index.js <username> [limit]");
   process.exit(1);
 }
 
@@ -23,6 +24,7 @@ function getDownloadsByUser(username) {
       const list = results
         // sort in place by download (descending)
         .sort((a, b) => b.downloads - a.downloads)
+        .slice(0, limit)
         // filter table content
         .map(({ package, downloads }) => ({ package, downloads }));
 
