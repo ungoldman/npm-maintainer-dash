@@ -36,22 +36,23 @@ function getDownloadsByUser(username) {
     });
 }
 
-function getRepoDownloads(repos) {
-  const reqs = [];
+async function getRepoDownloads(repos) {
+  const results = [];
 
-  repos.forEach((repo) => {
-    reqs.push(
-      new Promise((resolve, reject) => {
+  // batch requests
+  while (repos.length) {
+    const batch = repos.splice(0, 16).map((repo) => {
+      return new Promise((resolve, reject) => {
         stats.get.lastMonth(repo, function (err, results) {
           if (err) return reject(err);
           resolve(results);
         });
-      })
-    );
-  });
+      });
+    });
+    results.push(await Promise.all(batch));
+  }
 
-  // todo: batch requests like a responsible adult
-  return Promise.all(reqs);
+  return results.flat();
 }
 
 getDownloadsByUser(username);
